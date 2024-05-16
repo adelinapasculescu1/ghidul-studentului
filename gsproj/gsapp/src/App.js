@@ -1,6 +1,6 @@
 import { HashRouter  as Router, Route, Routes} from "react-router-dom";
 import './App.css';
-import Header from './components/Header';
+import Navbar from './components/navbar/Navbar';
 import NotesListPage from './pages/NotesListPage';
 import NotePage from "./pages/NotePage";
 
@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="container">
         <div className = "app">
-          <Header/>
+          <Navbar/>
           <Routes>
             <Route path="/" exact element={<NotesListPage/>}/>
             <Route path="/note/:id" element={<NotePage/>} />
