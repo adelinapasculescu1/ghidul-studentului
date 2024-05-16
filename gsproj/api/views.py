@@ -1,10 +1,20 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework import generics
 from .models import Section, Page
 from .serializers import PageSerializer, SectionSerializer
 
 # Create your views here.
+
+'''
+class SectionListByCategoryView(generics.ListAPIView):
+    serializer_class = SectionSerializer
+
+    def get_queryset(self):
+        category = self.kwargs['category']
+        return Section.objects.filter(category=category)
+'''    
 
 @api_view(['GET'])
 def getRoutes(request):
@@ -42,21 +52,14 @@ def getRoutes(request):
     ]
     return Response(routes)
 
-
 @api_view(['GET'])
-def getPages(request):
-    pages = Page.objects.all()
-    serializer = PageSerializer(pages, many=True)
-    return Response(serializer.data)
-
-@api_view(['GET'])
-def getSections(request):
-    sections = Section.objects.all()
+def getSections(request, category = None):
+    sections = Section.objects.filter(category=category)  
     serializer = SectionSerializer(sections, many=True)
     return Response(serializer.data)
 
-'''@api_view(['GET'])
-def getNote(request, pk):
-    notes = Note.objects.get(id=pk)
-    serializer = NoteSerializer(notes, many=False)
-    return Response(serializer.data)'''
+@api_view(['GET'])
+def getPages(request, category = None):
+    pages = Page.objects.filter(category=category)  
+    serializer = PageSerializer(pages, many=True)
+    return Response(serializer.data)

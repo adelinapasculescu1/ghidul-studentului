@@ -10,4 +10,4 @@ class SectionSerializer(ModelSerializer):
 class PageSerializer(ModelSerializer):
     class Meta:
         model = Page
-        fields = ['id', 'title', 'sections']
+        fields = ['id', 'title', 'category', 'link']
