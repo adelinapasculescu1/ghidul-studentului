@@ -1,0 +1,23 @@
+@import url('../../App.css');
+
+  /* Page card styling */
+  .page-card {
+    width: 100%; /* 80% of the parent container's width */
+    border: 5px solid var(--color-green);
+    border-radius: 100px;
+    padding: 10px;
+    margin: 10px 0; /* Add some space between the cards */
+    display: block; /* Ensure the card is a block element */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    
+  }
+  
+  /* Text inside the page card */
+  .page-card .text {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--color-text); /* Darker green for the text */
+    text-align: left; /* Center-align the text */
+    padding: 20px;
+    line-height: 0.9em;
+  }
