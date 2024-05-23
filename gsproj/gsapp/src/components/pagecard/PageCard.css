@@ -1,23 +1,27 @@
 @import url('../../App.css');
 
-  /* Page card styling */
   .page-card {
-    width: 100%; /* 80% of the parent container's width */
+    width: 100%;
     border: 5px solid var(--color-green);
     border-radius: 100px;
     padding: 10px;
-    margin: 10px 0; /* Add some space between the cards */
-    display: block; /* Ensure the card is a block element */
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-    
+    margin: 30px 0; 
+    display: block; 
+    box-sizing: border-box; 
+    transition: background-color 0.2s; 
+    position: relative; 
+    z-index: 1;
   }
   
-  /* Text inside the page card */
   .page-card .text {
     font-size: 36px;
     font-weight: 800;
-    color: var(--color-text); /* Darker green for the text */
-    text-align: left; /* Center-align the text */
+    color: var(--color-text); 
+    text-align: left; 
     padding: 20px;
     line-height: 0.9em;
+  }
+
+  .page-card:hover {
+    background-color: var(--color-green);
   }

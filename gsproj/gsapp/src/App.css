@@ -9,6 +9,7 @@
   --color-white: #FAF9F6;
   --color-blue: #2E3192;
   --color-dark-blue: #0C1080;
+  --color-backrgound-green:#8fff93;
 }
 
 .dark {
@@ -75,6 +76,7 @@ a {
   flex-direction: column;
   gap: 16px;
   align-items: center; 
+  padding-bottom: 100px;
 }
 
 
@@ -135,3 +137,10 @@ h2 {
 .p-3 { padding: 30px; }
 
 .text-center { text-align: center; }
+.content-wrapper {
+  margin-bottom: 100px; /* Adjust the value as needed */
+}
+
+.spacer {
+  height: 100px; /* Adjust the value as needed */
+}

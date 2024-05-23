@@ -12,15 +12,16 @@ const HomePage = () => {
     }, [])
 
 
-    let getPages = async () => {
+    let getPages = async (category) => {
         let response = await fetch('/api/pages/home')
         let data = await response.json()
         setPages(data)
     }
 
     return (
-        <div className="column-container">
-            <div className='mt-3'></div>
+        
+        <div className="column-container"><div className='content-wrapper'>
+            <div className='spacer'></div>
             <div className='row-container full-width'>
                 <div className="text">
                     <h1>E normal sa ai intrebari.</h1>
@@ -31,10 +32,10 @@ const HomePage = () => {
                 </div>
             </div>
 
-            {pages.map((page) => (
-                    <PageCard page={page} />
-                ))}
-        </div>
+            {pages.map(page => (
+                <PageCard key={page.id} page={page} />
+            ))}
+        </div></div>
       );
 }
 
