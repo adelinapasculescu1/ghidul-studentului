@@ -1,34 +1,51 @@
-/* src/components/ExpandableCard.css */
+@import url('../../App.css');
 .card {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin: 10px;
-    padding: 10px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .card-header h3 {
-    margin: 0;
-  }
-  
-  .toggle-button {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .card-content {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #ccc;
-  }
-  
+  width:100%;
+  border: 5px solid var(--color-green);
+  border-radius: 55px;
+  margin: 30px 0;
+  padding: 30px;
+  display: block; 
+  box-sizing: border-box; 
+  transition: background-color 0.2s; 
+  position: sticky; 
+  z-index: 1;
+  cursor: pointer; 
+  justify-content: space-between; 
+  overflow: hidden;
+}
+
+.card.expanded {
+  border-radius: 55px; 
+}
+
+.card-header {
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  text-overflow: ellipsis;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  pointer-events: none; 
+}
+
+.card-content {
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+  border-top: 1px solid #ccc;
+  transition: padding 0.2s; 
+  overflow: hidden; 
+  flex-grow: 1;
+}
+

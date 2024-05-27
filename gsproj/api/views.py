@@ -54,12 +54,12 @@ def getRoutes(request):
 
 @api_view(['GET'])
 def getSections(request, category = None):
-    sections = Section.objects.filter(category=category)  
+    sections = Section.objects.filter(category=category).order_by('position')  
     serializer = SectionSerializer(sections, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
 def getPages(request, category = None):
-    pages = Page.objects.filter(category=category)  
+    pages = Page.objects.filter(category=category).order_by('position')  
     serializer = PageSerializer(pages, many=True)
     return Response(serializer.data)

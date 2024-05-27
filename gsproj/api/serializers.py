@@ -4,10 +4,10 @@ from .models import Section, Page
 class SectionSerializer(ModelSerializer):
     class Meta:
         model = Section
-        fields = ['id', 'title', 'category', 'content']
+        fields = ['id', 'title', 'category', 'content', 'position']
 
 
 class PageSerializer(ModelSerializer):
     class Meta:
         model = Page
-        fields = ['id', 'title', 'category', 'link']
+        fields = ['id', 'title', 'category', 'link', 'position']

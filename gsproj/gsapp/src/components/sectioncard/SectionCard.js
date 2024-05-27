@@ -1,7 +1,18 @@
-import React, { useState } from 'react';
-import './SectionCard.css';
+import React, { useState } from "react";
+import "./SectionCard.css";
+import '../../App.css'
 
-const SectionCard = ({ title, content }) => {
+let getTitle = (section) => {
+  let title = section?.title
+  return title
+}
+
+let getContent = (section) => {
+  let content = section?.content
+  return content
+}
+
+const SectionCard = ({ section }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -11,18 +22,12 @@ const SectionCard = ({ title, content }) => {
   return (
     <div className={`card ${isExpanded ? 'expanded' : ''}`} onClick={toggleExpand}>
       <div className="card-header">
-        <h3>{title}</h3>
-        <button 
-          className="toggle-button" 
-          onClick={(e) => { 
-            e.stopPropagation(); 
-            toggleExpand(); 
-          }}
-        >
+        <h3>{getTitle(section)}</h3>
+        <button className="toggle-button">
           {isExpanded ? '-' : '+'}
         </button>
       </div>
-      {isExpanded && <div className="card-content">{content}</div>}
+      {isExpanded && <div className="card-content">{getContent(section)}</div>}
     </div>
   );
 };

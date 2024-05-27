@@ -38,6 +38,7 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
+
 a {
   text-decoration: none;
 }
@@ -53,17 +54,18 @@ a {
 }
 
 .row-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 80%;
   flex-direction: row;
   gap: 16px;
   align-items: center; 
-  justify-content: space-between; /* Ensures space between elements */
+  justify-content: center;  
 }
 
 .row-container > * {
-  flex: 1; /* Distribute space equally among all children */
-  min-width: 0; /* Ensure elements can shrink if necessary */
+  flex: 1; 
+  min-width: 0; 
 }
 
 .full-width{
@@ -138,7 +140,8 @@ h2 {
 
 .text-center { text-align: center; }
 .content-wrapper {
-  margin-bottom: 100px; /* Adjust the value as needed */
+  margin-bottom: 100px; 
+  width: 100%;/* Adjust the value as needed */
 }
 
 .spacer {
