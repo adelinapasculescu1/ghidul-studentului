@@ -34,7 +34,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background-color: var(--color-white);
   font-weight: 400;
   font-size: 16px;
 }
@@ -55,11 +55,11 @@ a {
 
 .row-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 80%;
   flex-direction: row;
   gap: 16px;
-  align-items: center; 
+  align-items: start; 
   justify-content: center;  
 }
 
@@ -141,9 +141,9 @@ h2 {
 .text-center { text-align: center; }
 .content-wrapper {
   margin-bottom: 100px; 
-  width: 100%;/* Adjust the value as needed */
+  width: 100%;
 }
 
 .spacer {
-  height: 100px; /* Adjust the value as needed */
+  height: 100px; 
 }
