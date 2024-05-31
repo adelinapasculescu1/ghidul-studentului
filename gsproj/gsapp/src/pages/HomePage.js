@@ -22,14 +22,14 @@ const HomePage = () => {
         
         <div className="column-container"><div className='content-wrapper'>
             <div className='spacer'></div>
-            <div className='row-container full-width'>
-                <div className="text">
-                    <h1>E normal sa ai intrebari.</h1>
-                    <h2>Aici ai si raspunsuri</h2>
-                </div>
-                <div className='image-container'>
-                    <img src={upt} />
-                </div>
+            <div className='row-container full-width align-right' style={{ alignItems: 'center' }}>
+                    <div className="text">
+                        <h1>E normal să ai întrebări.</h1>
+                        <h2>Aici ai și răspunsuri!</h2>
+                    </div>
+                    <div className='image-container'>
+                        <img src={upt} />
+                    </div>
             </div>
 
             {pages.map(page => (

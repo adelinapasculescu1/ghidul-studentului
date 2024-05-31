@@ -3,31 +3,27 @@
   position: fixed;
   width: 100%;
   top: 0;
-  height: 60px;
+  height: 70px;
   background-color: var(--color-blue);
-  z-index: var(--z-fixed);
+  z-index: 2;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0 10px;
+  padding-left: 10%;
+  padding-right: 10%;
  }
 
 .header h1 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 800;
   line-height: 20px;
   color: var(--color-white);
   text-align: left;
 }
 
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
 
 .header .logo {
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 800;
   line-height: 1;
   color: var(--color-white);
@@ -51,6 +47,7 @@
 
 .nav__list {
   display: flex;
+  align-items: right;
   text-align: center;
   line-height: 18px;
   flex-direction: row;
@@ -67,18 +64,42 @@
   text-align: center;
   color: var(--color-white);
   font-weight: 400;
+  font-size: 20px;
   transition: color 0.4s;
   white-space: normal; 
   width: max-content; 
+  position: relative; /* Add this */
 }
+/*
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 1px; 
+  height: 100%; 
+  background-color: var(--color-white); 
+  position: absolute;
+  right: -1rem; 
+  top: 0;
+}
+
+.nav__list li:last-child .nav__link::after {
+  display: none; 
+} */
  
 .nav__link:hover {
   color: var(--color-green);
 }
 
-@media (max-width: 950px) {
+.nav-spacer {
+  width: 10%;
+}
+
+@media (max-width: 1600px) {
   .hamburger {
     display: flex; 
+  }
+  .header{
+    padding-right: 4%;
   }
 
   .nav {
@@ -91,17 +112,25 @@
     right: 0;
     margin: 0; 
   }
+  .header .logo {
+    font-size: 28px
+  }
 
   .nav.open {
     display: flex; 
+    width: 25%;
+    min-width: 250px;
+    height: 100vh;
   }
 
   .nav__list {
+    
     flex-direction: column;
     align-items: flex-end; 
     gap: 0.1rem; 
     padding: 0; 
     margin: 0; 
+
   }
 
   .nav__link {

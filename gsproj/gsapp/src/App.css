@@ -63,6 +63,11 @@ a {
   justify-content: center;  
 }
 
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .row-container > * {
   flex: 1; 
   min-width: 0; 
@@ -102,15 +107,20 @@ main {
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 4em;
+  line-height: 0.9;
+  margin: 5px;
 }
 
 h2 {
   font-size: 2.5em;
   font-weight: 400;
+  line-height: 0.9;
+  margin: 5px;
 }
 
 .image-container {
+  max-width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,11 +129,18 @@ h2 {
 }
 
 .image-container img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 600px;
   min-width: 50%; /* Ensure the image is responsive */
   height: auto; /* Maintain the image's aspect ratio */
   object-fit: cover;
   border-radius: 45px;
+}
+
+@media (max-width: 900px) {
+  .image-container {
+    display: none;
+  }
 }
 
 .mt-1 { margin-top: 10px; }

@@ -30,6 +30,7 @@
 
 .card-header {
   font-size: 32px;
+  line-height: 1.1em;
   display: flex;
   justify-content: space-between;
   align-items: center;

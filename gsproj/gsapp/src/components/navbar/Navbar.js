@@ -1,13 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target) && !event.target.closest('.hamburger')) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,48 +44,48 @@ const Navbar = () => {
 
   return (
     <header className="header">
-      <div className="container">
+      <Link to={`/`}>
         <h1 className="logo">
-          Ghidul<br />studentului
+          Ghidul studentului 
         </h1>
-        <div className="hamburger" onClick={toggleMenu}>
-          &#9776; {/* Hamburger icon */}
-        </div>
-        <nav className={`nav ${isOpen ? 'open' : ''}`} id="nav-menu">
-          <ul className="nav__list">
-            <li className="nav__item">
-              <NavLink to="/upt" className="nav__link">
-                UPT
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink to="/facultatea-mea" className="nav__link">
-                Facultatea mea
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink to="/beneficii-si-servicii" className="nav__link">
-                Beneficii si servicii
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink to="/campusul-universitar" className="nav__link">
-                Campusul universitar
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink to="/student-life" className="nav__link">
-                Student life
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink to="/voluntariat" className="nav__link">
-                Voluntariat
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+      </Link>
+      <div className="hamburger" onClick={toggleMenu}>
+        &#9776; {/* Hamburger icon */}
       </div>
+      <nav className={`nav ${isOpen ? 'open' : ''}`} id="nav-menu" ref={menuRef}>
+        <ul className="nav__list">
+          <li className="nav__item">
+            <NavLink to="/upt" className="nav__link">
+              UPT
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/facultatea-mea" className="nav__link">
+              Facultatea mea
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/beneficii-si-servicii" className="nav__link">
+              Beneficii si servicii
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/campusul-universitar" className="nav__link">
+              Campusul universitar
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/student-life" className="nav__link">
+              Student life
+            </NavLink>
+          </li>
+          <li className="nav__item">
+            <NavLink to="/voluntariat" className="nav__link">
+              Voluntariat
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
