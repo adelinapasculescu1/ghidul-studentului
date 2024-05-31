@@ -1,10 +1,11 @@
 @import url('../../App.css');
+
 .card {
   width:100%;
   border: 5px solid var(--color-green);
   border-radius: 55px;
-  margin: 15px 0;
   padding: 30px;
+  margin: 15px 0;
   display: block; 
   box-sizing: border-box; 
   transition: background-color 0.2s; 
@@ -29,18 +30,27 @@
 }
 
 .card-header {
-  font-size: 32px;
-  line-height: 1.1em;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .card-header h3 {
+  font-weight: 800;
+  line-height: 1.1em;
+  font-size: 2em;
   margin: 0;
+  width: calc(100% - 40px); /* Adjust width to leave space for toggle button */
+  overflow-wrap:break-word; /* Break long words */
+  hyphens:auto;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
 }
 
 .toggle-button {
+  position: relative ;
   background: none;
   border: none;
   font-size: 30px;

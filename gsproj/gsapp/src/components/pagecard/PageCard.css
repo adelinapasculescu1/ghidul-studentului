@@ -4,21 +4,21 @@
     width: 100%;
     border: 5px solid var(--color-green);
     border-radius: 55px;
-    padding: 10px;
+    padding: 30px;
     margin: 30px 0; 
     display: block; 
     box-sizing: border-box; 
     transition: background-color 0.2s; 
     position: relative; 
     z-index: 1;
+    cursor: pointer;
   }
   
   .page-card .text {
-    font-size: 36px;
+    font-size: 2em;
     font-weight: 800;
     color: var(--color-text); 
     text-align: left; 
-    padding: 20px;
     line-height: 1.1em;
   }
 
