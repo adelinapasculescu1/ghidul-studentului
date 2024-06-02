@@ -1,11 +1,12 @@
 @import url('../../App.css');
 
 .card {
-  width:100%;
+  width: 100%;
   border: 5px solid var(--color-green);
   border-radius: 55px;
   padding: 30px;
-  margin: 15px 0;
+  margin-top: 0;
+  margin-bottom: 15px;
   display: block; 
   box-sizing: border-box; 
   transition: background-color 0.2s; 

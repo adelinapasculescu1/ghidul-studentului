@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900');
 
-
-
 :root {
   --color-text: #031602;
   --color-dark-green: #00DC09;
@@ -61,11 +59,8 @@ a {
   gap: 16px;
   align-items: start; 
   justify-content: center;  
-}
-
-.align-right {
-  display: flex;
-  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
 .row-container > * {
@@ -73,19 +68,15 @@ a {
   min-width: 0; 
 }
 
-.full-width{
-  width: 100%;
-}
-
 .column-container {
   width: 80%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
   align-items: center; 
   padding-bottom: 100px;
+  margin: 0;
+  padding: 0;
 }
-
 
 .app {
   display: flex;
@@ -96,7 +87,6 @@ a {
   position: relative;
   flex-direction: column;
 }
-
 
 main {
   flex: 1;
@@ -132,7 +122,7 @@ h2 {
   width: 100%;
   max-width: 600px;
   min-width: 50%; /* Ensure the image is responsive */
-  height: auto; /* Maintain the image's aspect ratio */
+  height: auto; 
   object-fit: cover;
   border-radius: 45px;
 }
@@ -144,7 +134,24 @@ h2 {
   
 }
 
+.text-center { text-align: center; }
+.content-wrapper {
+  margin-bottom: 100px; 
+  width: 100%;
+}
 
+.spacer {
+  height: 100px; 
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.full-width{
+  width: 100%;
+}
 
 .mt-1 { margin-top: 10px; }
 .mt-2 { margin-top: 20px; }
@@ -157,13 +164,3 @@ h2 {
 .p-1 { padding: 10px; }
 .p-2 { padding: 20px; }
 .p-3 { padding: 30px; }
-
-.text-center { text-align: center; }
-.content-wrapper {
-  margin-bottom: 100px; 
-  width: 100%;
-}
-
-.spacer {
-  height: 100px; 
-}
