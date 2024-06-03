@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
   height: 70px;
@@ -8,10 +8,15 @@
   z-index: 2;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 2%;
  }
+
+.left-elements {
+  display:inline-flex;
+  align-items: right; /* Align the elements vertically */
+  justify-content: right;
+}
+
 
 .header h1 {
   font-size: 25px;
@@ -70,21 +75,18 @@
   width: max-content; 
   position: relative; /* Add this */
 }
-/*
-.nav__link::after {
-  content: "";
-  display: block;
-  width: 1px; 
-  height: 100%; 
-  background-color: var(--color-white); 
-  position: absolute;
-  right: -1rem; 
-  top: 0;
+
+.fixed-image-container {
+  position: relative; 
+  align-items: center; 
+  right: 0px; 
+  
 }
 
-.nav__list li:last-child .nav__link::after {
-  display: none; 
-} */
+.fixed-image {
+  width: 120px;
+  height: auto; 
+}
  
 .nav__link:hover {
   color: var(--color-green);
@@ -97,9 +99,7 @@
 @media (max-width: 1600px) {
   .hamburger {
     display: flex; 
-  }
-  .header{
-    padding-right: 4%;
+    margin: 20px;
   }
 
   .nav {
@@ -113,7 +113,7 @@
     margin: 0; 
   }
   .header .logo {
-    font-size: 28px
+    font-size: 24px
   }
 
   .nav.open {

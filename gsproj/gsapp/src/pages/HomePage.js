@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react';
 import PageCard from '../components/pagecard/PageCard';
 import '../App.css';
 import upt from '../assets/upt.jpg';
+import Lottie from "lottie-react";
+import home_anim from "../assets/home_anim.json";
+
 
 const HomePage = () => {
 
@@ -19,17 +22,13 @@ const HomePage = () => {
     }
 
     return (
-        
         <div className="column-container"><div className='content-wrapper'>
-            <div className='spacer'></div>
             <div className='row-container full-width align-right' style={{ alignItems: 'center' }}>
                     <div className="text">
                         <h1>E normal să ai întrebări.</h1>
-                        <h2>Aici ai și răspunsuri!</h2>
+                        <h1 className='underlined'>Aici ai și răspunsuri!</h1>
                     </div>
-                    <div className='image-container'>
-                        <img src={upt} />
-                    </div>
+                    <Lottie animationData={home_anim} />;
             </div>
 
             {pages.map(page => (

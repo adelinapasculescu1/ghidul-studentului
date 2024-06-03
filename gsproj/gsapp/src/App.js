@@ -2,6 +2,7 @@ import { HashRouter  as Router, Route, Routes} from "react-router-dom";
 import './App.css';
 
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
 import HomePage from './pages/HomePage';
 import UPTPage from './pages/UPTPage';
@@ -28,7 +29,9 @@ function App() {
             <Route path="/voluntariat" exact element={<VolunteeringPage/>} />
           </Routes>
           </main>
+          <Footer/>
       </div>
+        
     </Router>
   );
 }

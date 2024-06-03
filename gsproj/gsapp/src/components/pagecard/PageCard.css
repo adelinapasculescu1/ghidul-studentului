@@ -4,8 +4,9 @@
     width: 100%;
     border: 5px solid var(--color-green);
     border-radius: 55px;
-    padding: 30px;
-    margin: 30px 0; 
+    padding: 25px;
+    margin-top: 25px;
+    margin-bottom: 0; 
     display: block; 
     box-sizing: border-box; 
     transition: background-color 0.2s; 
@@ -15,7 +16,7 @@
   }
   
   .page-card .text {
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: 800;
     color: var(--color-text); 
     text-align: left; 

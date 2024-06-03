@@ -4,9 +4,9 @@
   width: 100%;
   border: 5px solid var(--color-green);
   border-radius: 55px;
-  padding: 30px;
-  margin-top: 0;
-  margin-bottom: 15px;
+  padding: 25px;
+  margin-top: 25px;
+  margin-bottom: 0;
   display: block; 
   box-sizing: border-box; 
   transition: background-color 0.2s; 
@@ -21,17 +21,15 @@
   background-color: var(--color-green);
 }
 
+.card.expanded {
+  border-radius: 55px; 
+}
 
 .card.expanded:hover{
   background-color: var(--color-white);
 }
 
-.card.expanded {
-  border-radius: 55px; 
-}
-
 .card-header {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,10 +38,10 @@
 .card-header h3 {
   font-weight: 800;
   line-height: 1.1em;
-  font-size: 2em;
+  font-size: 1.6em;
   margin: 0;
-  width: calc(100% - 40px); /* Adjust width to leave space for toggle button */
-  overflow-wrap:break-word; /* Break long words */
+  width: calc(100% - 10px); 
+  overflow-wrap:break-word; 
   hyphens:auto;
   word-break: break-word;
   -webkit-hyphens: auto;

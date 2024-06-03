@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 import { Link } from 'react-router-dom';
+import upt_logo from '../../assets/upt_logo.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,11 +45,13 @@ const Navbar = () => {
 
   return (
     <header className="header">
+      
       <Link to={`/`}>
         <h1 className="logo">
           Ghidul studentului 
         </h1>
       </Link>
+      <div style={{ display: 'flex', flexDirection: 'row'}}>
       <div className="hamburger" onClick={toggleMenu}>
         &#9776; {/* Hamburger icon */}
       </div>
@@ -86,6 +89,10 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+
+      
+        <img src={upt_logo} alt="Logo" className="fixed-image" />
+      </div>
     </header>
   );
 };
