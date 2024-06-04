@@ -93,6 +93,7 @@ main {
   width: 100%;
   justify-content: center; 
   border-radius: 8px;
+  height: 100vh;
 }
 
 h1 {
@@ -151,7 +152,7 @@ h2 {
 
 
 .content-wrapper {
-  margin-bottom: 30px; 
+  margin-bottom: 60px; 
   width: 100%;
 }
 

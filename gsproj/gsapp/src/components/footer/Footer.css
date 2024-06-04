@@ -1,9 +1,62 @@
+@import url('../../App.css');
 .footer {
-    background-color: #f1f1f1;
-    padding: 1em;
-    text-align: center;
+    background-color: var(--color-white);
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
     width: 100%;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
 }
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-right > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.footer-right svg {
+    margin-right: 0.5em;
+}
+
+.footer .title {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.footer .text {
+    font-size: 1em;
+    font-weight: 300;
+    
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 1em;
+}
+
+.footer .social-icons a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5em;
+}
+
+
