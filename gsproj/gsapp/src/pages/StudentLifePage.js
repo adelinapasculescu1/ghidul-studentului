@@ -20,7 +20,11 @@ const StudentLifePage = () => {
     <div className='column-container'>
       <div className='content-wrapper'>
         <div className='spacer'></div>
-        <h1>Student Life</h1>
+        <div className='image-container'> </div>
+        <div className='title'>Student life</div>
+        <div className='row-container full-width'>
+          <div className='page-description'>Studenția, sau cum se mai spune, cei mai frumoși ani. Totuși, sunt plini de lucruri noi. Ce drepturi și obligații am acum? Cum se citește orarul? Ce înseamnă "evaluare distribuită"? Răspundurile sunt aici!</div>
+        </div>
         {sections.filter(section => section.position === 1).map(section => (
                 <SectionCard key={section.id} section={section} />
             ))}

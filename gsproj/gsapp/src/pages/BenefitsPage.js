@@ -20,7 +20,11 @@ const BenefitsPage = () => {
     <div className='column-container'>
       <div className='content-wrapper'>
         <div className='spacer'></div>
-        <h1>Beneficii și servicii</h1>
+        <div className='image-container'> </div>
+        <div className='title'>Beneficii și servicii</div>
+        <div className='row-container full-width'>
+          <div className='page-description'>Sigur ai văzut Biblioteca UPT, acum e momentul să aflii mai multe despre ea, dar și despre alte lucruri pe care Universitatea Politehnica Timișoara le pune la dispoziție studenților ei. De la CCOC, la baze sportive moderne, la burse sau la Campusul Virtual, aici găsești tot ce trebuie să știi despre ele.</div>
+        </div>
         {sections.filter(section => section.position === 1 || section.position === 2).map(section => (
                 <SectionCard key={section.id} section={section} />
             ))}

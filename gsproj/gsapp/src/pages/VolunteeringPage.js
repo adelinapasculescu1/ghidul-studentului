@@ -20,7 +20,11 @@ const VolunteeringPage = () => {
     <div className='column-container'>
       <div className='content-wrapper'>
         <div className='spacer'></div>
-        <h1>Voluntariat</h1>
+        <div className='image-container'> </div>
+        <div className='title'>Voluntariat</div>
+        <div className='row-container full-width'>
+          <div className='page-description'>Ți-ar plăcea să faci voluntariat? În cadrul Universității Politehnica Timișoara ai numeroase oportunități prin care te poți implica activ în viața studenților. Descoperă organizațiile studențești din UPT!</div>
+          </div>
         {sections.filter(section => section.position === 1).map(section => (
                 <SectionCard key={section.id} section={section} />
             ))}
@@ -54,4 +58,4 @@ const VolunteeringPage = () => {
   );
 }
 
-export default VolunteeringPage
+export default VolunteeringPage;

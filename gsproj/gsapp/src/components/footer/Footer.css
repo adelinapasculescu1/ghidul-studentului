@@ -39,18 +39,21 @@
 .footer .title {
     font-size: 2em;
     font-weight: 700;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .footer .text {
     font-size: 1em;
     font-weight: 300;
-    
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .footer .social-icons {
     display: flex;
     gap: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .footer .social-icons a {
@@ -59,4 +62,11 @@
     font-size: 1.5em;
 }
 
-
+@media (max-width: 650px) {
+    .footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }

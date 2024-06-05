@@ -20,7 +20,11 @@ const CampusPage = () => {
     <div className='column-container'>
       <div className='content-wrapper'>
         <div className='spacer'></div>
-        <h1>Campusul universitar</h1>
+        <div className='image-container'> </div>
+        <div className='title'>Campusul universitar</div>
+        <div className='row-container full-width'>
+          <div className='page-description'>Care-i treaba cu căminele? Dar cu cantina? Unde este clădirea ASPC? Aici găsești răspunsul acestor întrebări, iar în ceva timp, te vei simți de-al casei în Campusul UPT.</div>
+        </div>
         {sections.map(section => (
                 <SectionCard key={section.id} section={section} />
             ))}
