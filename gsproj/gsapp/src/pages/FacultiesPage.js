@@ -21,7 +21,8 @@ const FacultiesPage = () => {
         
         <div className="column-container"><div className='content-wrapper'>
             <div className='spacer'></div>
-                <h1>Facultatea mea</h1>
+            <div className='image-container'> </div>
+            <div className='title'>Facultatea mea</div>
             {pages.map(page => (
                 <PageCard key={page.id} page={page} />
             ))}

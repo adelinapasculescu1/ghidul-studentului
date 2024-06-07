@@ -28,6 +28,12 @@ const CampusPage = () => {
         {sections.map(section => (
                 <SectionCard key={section.id} section={section} />
             ))}
+        {sections.map((section, index) => (
+        <div key={index}>
+          <h2>{section.title}</h2>
+          <div dangerouslySetInnerHTML={{ __html: section.content }} />
+        </div>
+      ))}
         </div>
     </div>
   );

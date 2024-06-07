@@ -27,9 +27,10 @@ const HomePage = () => {
     return (
         <div className="column-container"><div className='content-wrapper'>
             <div className='row-container full-width align-right' style={{ alignItems: 'center' }}>
-                    <div className="text">
-                        <h1>E normal să ai întrebări.</h1>
-                        <h1 className='underlined'>Aici ai și răspunsuri!</h1>
+                    <div className="container align-right">
+                        <div className='title'>E normal să ai întrebări.</div>
+                        <div className='title underlined'>Aici ai și răspunsuri!</div>
+                        <div className='page-description'>Bine ai venit! Primul an de facultate poate fi stresant, dar nu-ți face griji, noi suntem aici să te ajutăm să te acomodezi. Alege de mai jos secțiunea care te interesează!</div>
                     </div>
                     <Lottie animationData={anim_home5} />;
             </div>

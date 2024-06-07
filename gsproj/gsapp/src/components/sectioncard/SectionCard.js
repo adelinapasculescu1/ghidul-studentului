@@ -27,7 +27,7 @@ const SectionCard = ({ section }) => {
           {isExpanded ? '-' : '+'}
         </button>
       </div>
-      {isExpanded && <div className="card-content">{getContent(section)}</div>}
+      {isExpanded && (<div className="card-content" dangerouslySetInnerHTML={{ __html: getContent(section) }} />)}
     </div>
   );
 };

@@ -29,6 +29,12 @@
   background-color: var(--color-white);
 }
 
+@media (max-width: 900px) {
+  .card:hover{
+    background-color: var(--color-white);
+  }
+}
+
 .card-header {
   display: flex;
   justify-content: space-between;
