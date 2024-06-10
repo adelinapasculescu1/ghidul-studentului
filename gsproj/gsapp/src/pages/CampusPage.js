@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../App.css';
 import SectionCard from '../components/sectioncard/SectionCard';
+import campus_page from "../assets/campus_page.png";
 
 const CampusPage = () => {
   let [sections, setSections] = useState([])
@@ -20,7 +21,7 @@ const CampusPage = () => {
     <div className='column-container'>
       <div className='content-wrapper'>
         <div className='spacer'></div>
-        <div className='image-container'> </div>
+        <div className='image-container'><img src={campus_page} alt="campus image"/> </div>
         <div className='title'>Campusul universitar</div>
         <div className='row-container full-width'>
           <div className='page-description'>Care-i treaba cu căminele? Dar cu cantina? Unde este clădirea ASPC? Aici găsești răspunsul acestor întrebări, iar în ceva timp, te vei simți de-al casei în Campusul UPT.</div>

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../App.css';
 import SectionCard from '../components/sectioncard/SectionCard';
-import upt from '../assets/upt.jpg'
+import upt_page from '../assets/upt_page.png'
 
 const UPTPage = () => {
 
@@ -22,7 +22,7 @@ const UPTPage = () => {
     <div className='column-container'>
       <div className='content-wrapper'>
         <div className='spacer'></div>
-        <div className='image-container'> <img src={upt} alt="upt page img"/></div>
+        <div className='image-container'> <img src={upt_page} alt="upt page img"/></div>
         <div className='title'>Universitatea Poltehnica Timișoara</div>
         <div className='row-container full-width'>
           <div className='page-description'>Ce este UPT? Cum funcționează o universitate? Aici găsești tot ce trebuie să știi despre universitatea noastră, inclusiv detalii despre istoria și valorile UPT sau despre structura administrativă. Explorează pentru a te familiariza cu noul tău mediu academic!</div>

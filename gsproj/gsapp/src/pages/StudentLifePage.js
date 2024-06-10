@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../App.css';
 import SectionCard from '../components/sectioncard/SectionCard';
+import student_life_page from "../assets/student_life_page.png";
 
 const StudentLifePage = () => {
   let [sections, setSections] = useState([])
@@ -20,7 +21,7 @@ const StudentLifePage = () => {
     <div className='column-container'>
       <div className='content-wrapper'>
         <div className='spacer'></div>
-        <div className='image-container'> </div>
+        <div className='image-container'> <img src={student_life_page} alt="student_life image"/></div>
         <div className='title'>Student life</div>
         <div className='row-container full-width'>
           <div className='page-description'>Studenția, sau cum se mai spune, cei mai frumoși ani. Totuși, sunt plini de lucruri noi. Ce drepturi și obligații am acum? Cum se citește orarul? Ce înseamnă "evaluare distribuită"? Răspundurile sunt aici!</div>

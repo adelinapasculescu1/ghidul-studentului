@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import PageCard from '../components/pagecard/PageCard';
 import '../App.css';
-import upt from '../assets/upt.jpg';
+import faculties_page from "../assets/faculties_page.png";
+
 
 const FacultiesPage = () => {
   let [pages, setPages] = useState([])
@@ -18,10 +19,9 @@ const FacultiesPage = () => {
     }
 
     return (
-        
         <div className="column-container"><div className='content-wrapper'>
             <div className='spacer'></div>
-            <div className='image-container'> </div>
+            <div className='image-container'> <img src={faculties_page} alt="faculties image"/> </div>
             <div className='title'>Facultatea mea</div>
             {pages.map(page => (
                 <PageCard key={page.id} page={page} />

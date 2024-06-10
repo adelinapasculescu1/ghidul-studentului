@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../App.css';
 import SectionCard from '../components/sectioncard/SectionCard';
+import volunteering_page from "../assets/volunteering_page.png";
 
 const VolunteeringPage = () => {
   let [sections, setSections] = useState([])
@@ -20,7 +21,7 @@ const VolunteeringPage = () => {
     <div className='column-container'>
       <div className='content-wrapper'>
         <div className='spacer'></div>
-        <div className='image-container'> </div>
+        <div className='image-container'> <img src={volunteering_page} alt="volunteering image"/></div>
         <div className='title'>Voluntariat</div>
         <div className='row-container full-width'>
           <div className='page-description'>Ți-ar plăcea să faci voluntariat? În cadrul Universității Politehnica Timișoara ai numeroase oportunități prin care te poți implica activ în viața studenților. Descoperă organizațiile studențești din UPT!</div>
