@@ -23,7 +23,7 @@ const UPTPage = () => {
       <div className='content-wrapper'>
         <div className='spacer'></div>
         <div className='image-container'> <img src={upt_page} alt="upt page img"/></div>
-        <div className='title'>Universitatea Poltehnica Timișoara</div>
+        <div className='title'>Universitatea Politehnica Timișoara</div>
         <div className='row-container full-width'>
           <div className='page-description'>Ce este UPT? Cum funcționează o universitate? Aici găsești tot ce trebuie să știi despre universitatea noastră, inclusiv detalii despre istoria și valorile UPT sau despre structura administrativă. Explorează pentru a te familiariza cu noul tău mediu academic!</div>
         </div>
@@ -40,6 +40,9 @@ const UPTPage = () => {
                 <SectionCard key={section.id} section={section} />
             ))}
         </div>
+        {sections.filter(section => section.position > 6).map(section => (
+                <SectionCard key={section.id} section={section} />
+            ))}
         </div>
     </div>
   );

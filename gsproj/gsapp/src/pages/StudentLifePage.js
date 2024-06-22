@@ -38,10 +38,13 @@ const StudentLifePage = () => {
                 <SectionCard key={section.id} section={section} />
             ))}
         <div className='row-container full-width'>
-          {sections.filter(section => section.position === 5 || section.position === 6 || section.position === 6).map(section => (
+          {sections.filter(section => section.position === 5 || section.position === 6).map(section => (
                 <SectionCard key={section.id} section={section} />
             ))}
         </div>
+        {sections.filter(section => section.position > 6).map(section => (
+                <SectionCard key={section.id} section={section} />
+            ))}
         </div>
     </div>
   );

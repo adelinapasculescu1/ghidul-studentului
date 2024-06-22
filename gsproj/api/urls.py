@@ -6,7 +6,4 @@ urlpatterns = [
     path('', views.getRoutes, name = "routes"),
     path('sections/<str:category>/', getSections, name='get-sections'),
     path('pages/<str:category>/', getPages, name='get-pages'),
-
-    #path('notes/', views.getPages, name = "notes"),
-    #path('notes/<str:pk>/', views.getNote, name = "note"),
 ]

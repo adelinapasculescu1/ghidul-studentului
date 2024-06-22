@@ -142,23 +142,13 @@ STATICFILES_DIRS = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 JAZZMIN_SETTINGS = {
-    # title of the window (Will default to current_admin_site.site_title if absent or None)
-    "site_title": 'Ghidul Studentului UPT - panou de administrare',
+    "site_title": 'Ghidul Studentului - panou de administrare',
 
-    # Title on the login screen (19 chars max) (defaults to current_admin_site.site_header if absent or None)
-    "site_header": "Ghidul Studentului UPT - panou de administrare",
+    "site_header": "Ghidul Studentului - panou de administrare",
 
-    # Welcome text on the login screen
     "welcome_sign": "Ghidul Studentului",
-
-    #############
-    # UI Tweaks #
-    #############
-    # Relative paths to custom CSS/JS scripts (must be present in static files)
     "custom_css": None,
     "custom_js": None,
-    # Whether to link font from fonts.googleapis.com (use custom_css to supply font otherwise)
     "use_google_fonts_cdn": 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900',
-    # Whether to show the UI customizer on the sidebar
     "show_ui_builder": False,
 }

@@ -15,7 +15,6 @@ let getLink = (page) => {
 
 const PageCard = ({page}) => {
   return (
-    
       <div className="page-card"><Link to={`/${getLink(page)}`}>
         <div className="text">{getTitle(page)}</div></Link>
       </div>

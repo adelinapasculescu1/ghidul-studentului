@@ -20,20 +20,20 @@ const HomePage = () => {
         };
 
         window.addEventListener('resize', handleResize);
-        handleResize(); // Initial check
+        handleResize(); 
 
         return () => window.removeEventListener('resize', handleResize);
     }, [])
 
 
-    let getPages = async (category) => {
+    let getPages = async () => {
         let response = await fetch('/api/pages/home')
         let data = await response.json()
         setPages(data)
     }
 
 
-    let getSections = async (category) => {
+    let getSections = async () => {
         let response = await fetch('/api/sections/contact')
         let data = await response.json()
         setSections(data)

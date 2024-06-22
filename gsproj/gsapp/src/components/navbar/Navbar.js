@@ -45,16 +45,15 @@ const Navbar = () => {
 
   return (
     <header className="header">
-      
       <Link to={`/`}>
         <h1 className="logo">
           Ghidul studentului 
         </h1>
       </Link>
       <div style={{ display: 'flex', flexDirection: 'row'}}>
-      <div className="hamburger" onClick={toggleMenu}>
-        &#9776; {/* Hamburger icon */}
-      </div>
+        <div className="hamburger" onClick={toggleMenu}>
+          &#9776; {/* Hamburger icon */}
+        </div>
       <nav className={`nav ${isOpen ? 'open' : ''}`} id="nav-menu" ref={menuRef}>
         <ul className="nav__list">
           <li className="nav__item">
@@ -89,8 +88,6 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-
-      
         <img src={upt_logo} alt="Logo" className="fixed-image" />
       </div>
     </header>

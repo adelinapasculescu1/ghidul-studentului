@@ -31,6 +31,9 @@ const FacultyPage = ({category, title}) => {
                 <SectionCard key={section.id} section={section} />
             ))}
         </div>
+        {sections.filter(section => section.position > 3).map(section => (
+                <SectionCard key={section.id} section={section} />
+            ))}
         </div>
     </div>
   );

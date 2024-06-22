@@ -41,6 +41,9 @@ const BenefitsPage = () => {
         {sections.filter(section => section.position === 7).map(section => (
                 <SectionCard key={section.id} section={section} />
             ))}
+        {sections.filter(section => section.position > 7).map(section => (
+                <SectionCard key={section.id} section={section} />
+            ))}
         </div>
     </div>
   );

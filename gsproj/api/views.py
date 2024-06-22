@@ -20,34 +20,16 @@ class SectionListByCategoryView(generics.ListAPIView):
 def getRoutes(request):
     routes = [
         {
-            'Endpoint': '/notes/',
+            'Endpoint': '/sections/<str:category>',
             'method': 'GET',
             'body': None,
-            'description': 'Returns an array of notes'
+            'description': 'Returns an array of sections, filtered by category'
         },
         {
-            'Endpoint': '/notes/id',
+            'Endpoint': '/pages/<str:category>',
             'method': 'GET',
             'body': None,
-            'description': 'Returns a single note object'
-        },
-        {
-            'Endpoint': '/notes/create/',
-            'method': 'POST',
-            'body': {'body': ""},
-            'description': 'Creates new note with data sent in post request'
-        },
-        {
-            'Endpoint': '/notes/id/update/',
-            'method': 'PUT',
-            'body': {'body': ""},
-            'description': 'Creates an existing note with data sent in post request'
-        },
-        {
-            'Endpoint': '/notes/id/delete/',
-            'method': 'DELETE',
-            'body': None,
-            'description': 'Deletes and exiting note'
+            'description': 'Returns an array of pages, filtered by category'
         },
     ]
     return Response(routes)
